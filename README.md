@@ -25,7 +25,8 @@ The game encourages simple controls and a buff system, but fun to play.
 
  
 MVP Milestones:
-Milestones that can be reached at the end of week 8:
+
+The game by week 8 will have:
 
 Player movement
 
