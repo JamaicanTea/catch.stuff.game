@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaunchBuff : MonoBehaviour {
 
-	public GameObject buff;
+	public GameObject buffPrefab;
 	public float fallSpeedBuff = 10f;
 	public GameObject launchBuff;
 
@@ -15,13 +15,14 @@ public class LaunchBuff : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void DropBuffs () //function for dropping points/penalty objects
+	void DropBuffs () //function for dropping buffs
 	{
-		this.buff = Instantiate (this.buff, launchBuff.transform.position, transform.rotation);
-		Rigidbody2D rb = buff.GetComponent<Rigidbody2D> ();
+		GameObject buffInstance = Instantiate (buffPrefab, launchBuff.transform.position, transform.rotation);
+		Rigidbody2D rb = buffInstance.GetComponent<Rigidbody2D> ();
 		Vector2 randomPos = new Vector2 (Random.Range (-7f, 8f), 6.2f); 
-		buff.transform.position = randomPos;
+		buffInstance.transform.position = randomPos;
 		rb.velocity = Vector2.down * fallSpeedBuff;
+		buffInstance.gameObject.SetActive (true);
 	}
 
 }

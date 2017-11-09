@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Point : MonoBehaviour
-{
+public class Penalty : MonoBehaviour {
 	public float destroyMinHeight = -6f;
 	public ScoreManager newPoints;
 
@@ -20,7 +19,7 @@ public class Point : MonoBehaviour
 	{
 		if (point.gameObject.CompareTag ("Player")) 
 		{
-			point.SendMessage ("IncrementScore");
+			point.SendMessage ("DecrementScore");
 			Destroy(gameObject);
 		}
 	}

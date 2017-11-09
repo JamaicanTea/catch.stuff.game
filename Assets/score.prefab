@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212247053845113370}
   - component: {fileID: 50464406551833340}
   - component: {fileID: 61239230427459212}
-  - component: {fileID: 114836898239668020}
+  - component: {fileID: 114420463539958862}
   m_Layer: 0
   m_Name: score
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &61239230427459212
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.000002, y: 30.000002}
   m_EdgeRadius: 0
---- !u!114 &114836898239668020
+--- !u!114 &114420463539958862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1939922961988596}
+  newPoints: {fileID: 0}
 --- !u!212 &212247053845113370
 SpriteRenderer:
   m_ObjectHideFlags: 1
