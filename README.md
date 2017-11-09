@@ -34,7 +34,5 @@ Falling objects
 
 Score and penalty
 
-A “Life bar” system
-
 A simple buff item.
  
