@@ -7,7 +7,6 @@ public class ScoreManager : MonoBehaviour
 {
 	public Text scoreboard;
 	public int score = 0;
-	int updatedScore;
 
 	// Use this for initialization
 	void Start()//Displays score board
@@ -18,18 +17,18 @@ public class ScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void PointsOnBoard () //score board
 	{
-		scoreboard.text = "Points :" + updatedScore;
+		scoreboard.text = "Points :" + score;
 	}
 
 	public void IncrementScore()//increases player's score	
 	{
-		updatedScore = score++;
+		score++;
 		PointsOnBoard ();
 	}
 
 	public void DecrementScore()//penalizes the player's score
 	{
-		updatedScore = score--;
+		score--;
 		PointsOnBoard ();
 	}
 }

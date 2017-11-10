@@ -5,7 +5,6 @@ using UnityEngine;
 public class Point : MonoBehaviour
 {
 	public float destroyMinHeight = -6f;
-	public ScoreManager newPoints;
 
 	// Update is called once per frame
 	void Update () 

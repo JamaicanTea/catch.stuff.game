@@ -11,7 +11,7 @@ public class LaunchBuff : MonoBehaviour {
 	void Start () 
 	{
 
-		InvokeRepeating ("DropBuffs", 15f, 15f); //makes sure the objects fall each 2 seconds
+		InvokeRepeating ("DropBuffs", 0f, 0f); //makes sure the objects fall each 2 seconds
 	}
 
 	// Update is called once per frame
