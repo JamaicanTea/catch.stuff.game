@@ -6,18 +6,19 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
 	public Text scoreboard;
-	public int score = 0;
+	public float score = 0;
 
 	// Use this for initialization
 	void Start()//Displays score board
 	{
-		scoreboard.text = "Points :" +score ;
+		scoreboard.text = "Points :" +score;
+		score = Mathf.Clamp (score , Mathf.Infinity, 0);//makes sure the score doesnt hit below 0
 	}
-	
-	// Update is called once per frame
+
 	void PointsOnBoard () //score board
 	{
 		scoreboard.text = "Points :" + score;
+
 	}
 
 	public void IncrementScore()//increases player's score	
@@ -29,6 +30,7 @@ public class ScoreManager : MonoBehaviour
 	public void DecrementScore()//penalizes the player's score
 	{
 		score--;
-		PointsOnBoard ();
+		PointsOnBoard ();	
 	}
+		
 }
