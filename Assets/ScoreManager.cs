@@ -12,7 +12,11 @@ public class ScoreManager : MonoBehaviour
 	void Start()//Displays score board
 	{
 		scoreboard.text = "Points :" +score;
-		score = Mathf.Clamp (score , Mathf.Infinity, 0);//makes sure the score doesnt hit below 0
+		//score = Mathf.Clamp (score , Mathf.Infinity, 0);//makes sure the score doesnt hit below 0
+		if (score <= 0)
+		{
+			score = 0;
+		}
 	}
 
 	void PointsOnBoard () //score board
