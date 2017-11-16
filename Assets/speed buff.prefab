@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyMinHeight: -6
+  buffTime: 1
+  speedBuff: 5
+  timer: 0
 --- !u!212 &212838767205233100
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,5 +143,3 @@ SpriteRenderer:
   m_Size: {x: 30.000002, y: 30.000002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0

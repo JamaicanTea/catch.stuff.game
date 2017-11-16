@@ -13,10 +13,6 @@ public class ScoreManager : MonoBehaviour
 	{
 		scoreboard.text = "Points :" +score;
 		//score = Mathf.Clamp (score , Mathf.Infinity, 0);//makes sure the score doesnt hit below 0
-		if (score <= 0)
-		{
-			score = 0;
-		}
 	}
 
 	void PointsOnBoard () //score board
@@ -33,7 +29,12 @@ public class ScoreManager : MonoBehaviour
 
 	public void DecrementScore()//penalizes the player's score
 	{
+		//score = Mathf.Max (0, score - 1);
 		score--;
+		if (score < 0)
+		{
+			score = 0;
+		}
 		PointsOnBoard ();	
 	}
 		
