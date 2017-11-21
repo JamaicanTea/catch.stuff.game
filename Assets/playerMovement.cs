@@ -6,6 +6,7 @@ public class playerMovement : MonoBehaviour {
 
 	public float speed = 5f;
 	public Rigidbody2D rb2d;
+	public int life = 3;
 
 	// Use this for initialization
 	void Start () 
@@ -24,5 +25,10 @@ public class playerMovement : MonoBehaviour {
 		{
 			rb2d.velocity = new Vector2 (-speed, 0);
 		}
+		if (life == 0) 
+		{
+			print ("Game Over!");
+		}
+
 }
 }

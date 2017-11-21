@@ -5,7 +5,12 @@ using UnityEngine;
 public class Penalty : MonoBehaviour {
 	public float destroyMinHeight = -6f;
 	public ScoreManager newPoints;
+	public playerMovement playerLife;
 
+	void Start ()
+	{
+		playerLife = GetComponent<playerMovement> ();
+	}
 	// Update is called once per frame
 	void Update () 
 	{
@@ -19,6 +24,7 @@ public class Penalty : MonoBehaviour {
 	{
 		if (point.gameObject.CompareTag ("Player")) 
 		{
+			playerLife.life--;
 			point.SendMessage ("DecrementScore");
 			Destroy(gameObject);
 		}
