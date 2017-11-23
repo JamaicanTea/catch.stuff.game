@@ -24,7 +24,7 @@ public class Penalty : MonoBehaviour {
 	{
 		if (point.gameObject.CompareTag ("Player")) 
 		{
-			playerLife.life--;
+			//playerLife.life--; supposed to decrease life whenever its hit
 			point.SendMessage ("DecrementScore");
 			Destroy(gameObject);
 		}
