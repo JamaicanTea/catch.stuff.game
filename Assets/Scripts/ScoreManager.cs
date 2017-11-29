@@ -29,9 +29,8 @@ public class ScoreManager : MonoBehaviour
 
 	public void DecrementScore()//penalizes the player's score
 	{
-		//score = Mathf.Max (0, score - 1);
 		score--;
-		if (score < 0)
+		if (score < 0)//makes sure score does not go to negative values
 		{
 			score = 0;
 		}
