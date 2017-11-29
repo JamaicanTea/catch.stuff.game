@@ -2,13 +2,13 @@
 Game Design Document
 
 Game title
-<What title would appear on the box, App Store, Steam, itch.io, etc.  Can you come up with a title that is unique, descriptive, funny, or clever?  It does not have to be all of these things, but it probably should be more than one of these things>
+"Jungle Jumble!"
 
 Summary of game’s story, focusing on gameplay
-<What is the backstory to your game?  I hope the bad guy hasn’t kidnapped your girl!!!!  Having a deep, coherent backstory can help ground all of the elements of the game>
+You are a monkey engineer who has just made a banana collecting device, and by some coincidence, there was a huge quake that would make all the bananas fall down from the trees! Your job is to collect as many bananas as you can, but there is one catch: avoid the overriped bananas, since it will spoil all of your banana supplies.
 
 Intended systems
-<What can you do in the game?  How do enemies function?  What are the goals?  What are the mechanics?  What features do you need to implement?>
+The goal in the game is to collect as many points as you can, while avoiding objects that would kill you. There will be a buff that would help you get through the game.
 
 Intended audience
 This game is intended to casual players who were looking for a simple and fun game that they can pick up and play.
