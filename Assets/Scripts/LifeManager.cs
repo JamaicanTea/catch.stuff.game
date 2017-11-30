@@ -8,6 +8,7 @@ public class LifeManager : MonoBehaviour {
 	public int lives = 3;
 	public GameObject reset;
 	public GameObject quit;
+	public GameObject gameOver;
 	Coroutine lose;
 	public bool isDead;
 
@@ -36,6 +37,7 @@ public class LifeManager : MonoBehaviour {
 		if (isDead == true)
 		{
 			Time.timeScale = 0;
+			gameOver.gameObject.SetActive (true);
 			reset.gameObject.SetActive (true);
 	        quit.gameObject.SetActive (true);
 	}
