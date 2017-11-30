@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent (typeof(AudioClip))]
 
 public class SpeedBuff : MonoBehaviour {
 	playerMovement playerScript;
 	public float destroyMinHeight = -6f;
 	public float speedBuff = 5f;
+	AudioSource buffBleep;
+	public AudioClip speedUp;
 
 	Coroutine co;
+
+	void Start ()
+	{
+		buffBleep = GetComponent <AudioSource> ();
+	}
 
 	void OnTriggerEnter2D (Collider2D other)//when buff hits player, it boosts the player's speed into 9
 	{
 		if (other.gameObject.CompareTag ("Player")) 
 		{
 			co = StartCoroutine(BuffSpeed(other));
+			buffBleep.PlayOneShot (speedUp);
+
 		}
 	}
 

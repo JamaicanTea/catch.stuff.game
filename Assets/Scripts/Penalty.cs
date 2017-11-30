@@ -32,7 +32,7 @@ public class Penalty : MonoBehaviour {
 			penaltyBleep.PlayOneShot  (penalize,1f); //it plays repeatedly for some reason
 			point.SendMessage ("DecrementScore");
 			point.SendMessage ("GetHit",SendMessageOptions.DontRequireReceiver);//supposed to decrease life whenever its hit
-			//Destroy(gameObject);
+			Destroy(gameObject, 1f);
 		}
 	}
 }

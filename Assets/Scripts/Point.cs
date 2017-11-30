@@ -28,7 +28,7 @@ public class Point : MonoBehaviour
 		{
 			pointBleep.PlayOneShot (addPoint,1f); //it does not play
 			point.SendMessage ("IncrementScore");
-			Destroy(gameObject);
+			Destroy(gameObject, 2f);
 		}
 	}
 }
