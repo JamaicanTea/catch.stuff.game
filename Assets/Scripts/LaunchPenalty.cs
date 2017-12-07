@@ -6,10 +6,15 @@ public class LaunchPenalty : MonoBehaviour {
 	public GameObject penaltyPrefab;
 	public GameObject launchPenalty;
 	public float fallSpeedPen = 10f;
+	public ScoreManager scoreManager;
+	public GameObject fallingStuff1;
+	public GameObject fallingStuff2;
+
 
 	// Use this for initialization
 	void Start () 
 	{
+		scoreManager = GetComponent <ScoreManager> ();
 		InvokeRepeating ("DropPenalty", 0f, 1f); //makes sure the objects fall each 2 seconds
 	}
 
@@ -22,6 +27,12 @@ public class LaunchPenalty : MonoBehaviour {
 		penaltyInstance.transform.position = randomPos;
 		rb.velocity = Vector2.down * fallSpeedPen;
 		penaltyInstance.gameObject.SetActive (true);
-	
+
+		if(scoreManager.score == scoreManager.score - 1 )
+		{
+			fallSpeedPen++;
+		}	
+			
 	}
+		
 }

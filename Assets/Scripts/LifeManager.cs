@@ -15,6 +15,7 @@ public class LifeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start()//Displays score board
 	{
+		Time.timeScale = 1;
 		lifeBoard.text = "Lives :" + lives;
 		//score = Mathf.Clamp (score , Mathf.Infinity, 0);//makes sure the score doesnt hit below 0
 	}
@@ -36,11 +37,10 @@ public class LifeManager : MonoBehaviour {
 	{
 		if (isDead == true)
 		{
-			Time.timeScale = 0;
 			gameOver.gameObject.SetActive (true);
 			reset.gameObject.SetActive (true);
 	        quit.gameObject.SetActive (true);
+			Time.timeScale = 0;
+		}
 	}
-			
-}
 }
