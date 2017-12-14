@@ -36,3 +36,7 @@ Score and penalty
 
 A simple buff item.
  
+ Game's Control and how to play.
+  Use the left and right arrow keys for movement.
+  Avoid discolored bananas and get the yellow bananas.
+  Green glowing mangoes gives you burst of speed.
