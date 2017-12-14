@@ -28,11 +28,6 @@ public class LaunchPenalty : MonoBehaviour {
 		rb.velocity = Vector2.down * fallSpeedPen;
 		penaltyInstance.gameObject.SetActive (true);
 
-		if(scoreManager.score == scoreManager.score - 1 )
-		{
-			fallSpeedPen++;
-		}	
-			
 	}
 		
 }

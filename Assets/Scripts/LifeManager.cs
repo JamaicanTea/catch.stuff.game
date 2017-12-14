@@ -9,7 +9,6 @@ public class LifeManager : MonoBehaviour {
 	public GameObject reset;
 	public GameObject quit;
 	public GameObject gameOver;
-	Coroutine lose;
 	public bool isDead;
 
 	// Use this for initialization

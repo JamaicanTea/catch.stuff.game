@@ -34,7 +34,7 @@ public class SpeedBuff : MonoBehaviour {
 		print ("you are buffed!");
 		playerScript.speed += speedBuff ;
 
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (5f);
 
 		playerScript.speed -= speedBuff;
 		print ("Time out!");
